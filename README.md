@@ -14,7 +14,7 @@ This project was developed as part of the Measurements and Instrumentation modul
 - **LabVIEW**: For programming and controlling the system.
 - **Raspberry Pi**: Used for image recognition tasks and system integration.
 - **DAQ Card**: For data acquisition and sensor management.
-- **Sensors**: Weight sensor, door contact sensor, etc.
+- **Sensors**: Weight sensor, door contact sensor, Water Level sensor.
 - **Machine Learning Model**: Trained for fruit and vegetable identification.
 - **Chilled Water Dispenser**: Automatically dispenses water.
 
@@ -28,7 +28,9 @@ This project was developed as part of the Measurements and Instrumentation modul
     - Calibrated weight sensors to monitor food supplies and trigger an alert when running low.
 4. **Image Recognition (Raspberry Pi)**:
     - Raspberry Pi integrated with a trained machine learning model to recognize and catalog fruits and vegetables in the fridge.
-    
+5. **Water Level sensor and Automatic Water Dispenser**:
+    - Start the motor and fill the chill water tank when the water level is low, when the water level is higher than a given level the motor stops.
+          
 ## Installation and Setup
 
 ### Hardware Setup
@@ -47,15 +49,6 @@ This project was developed as part of the Measurements and Instrumentation modul
       sudo apt-get install python3-opencv
       sudo pip3 install tensorflow
       ```
-    - Clone this repository:
-      ```bash
-      git clone https://github.com/yourusername/smart-refrigerator-system.git
-      ```
-    - Run the image recognition script on the Raspberry Pi.
-      ```bash
-      python3 fruit_veg_recognition.py
-      ```
-
 ## Usage
 - The system automatically dispenses chilled water when the user interacts with the water dispenser.
 - The door contact sensor monitors the door status and alerts after 3 minutes if the door is left open.
